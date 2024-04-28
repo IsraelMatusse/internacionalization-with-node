@@ -1,0 +1,25 @@
+{
+  "name": "internacionalization-node",
+  "version": "1.0.0",
+  "description": "aplicacao de teste de internacionalizacao",
+  "main": "index.js",
+  "author": "israel matusse",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/i18next": "^13.0.0",
+    "@types/node": "^20.12.7",
+    "@types/nodemon": "^1.19.6",
+    "express": "^4.19.2",
+    "i18next": "^23.11.2",
+    "i18next-fs-backend": "^2.3.1",
+    "i18next-http-middleware": "^3.5.0",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "tsc --project ./",
+    "dev": "nodemon src/server.ts"
+  }
+}
