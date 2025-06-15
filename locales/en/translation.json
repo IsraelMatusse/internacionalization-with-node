@@ -1,3 +1,9 @@
 {
-  "api_health": "API health is good."
+  "api_health": "API health is good.",
+   "auth": {
+    "invalid_credentials": "Invalid credentials were inserted. Please check your data and try again."
+  },
+  "user": {
+    "phone_exists": "User with phone number {{phoneNumber}} already exists."
+  }
 }

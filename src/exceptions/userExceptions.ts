@@ -13,3 +13,12 @@ export class BadCredentialsException extends HttpException<void> {
     super(StatusCodes.UNAUTHORIZED, message);
   }
 }
+
+export class UserWithPhoneNumberAlredyExists extends HttpException<void> {
+  constructor(phoneNumber: string, lang: string = defaultLang) {
+    const message = I18nHelper.translateWithVars(`user.phone_exists`, lang, {
+      phoneNumber,
+    });
+    super(StatusCodes.CONFLICT, message);
+  }
+}
