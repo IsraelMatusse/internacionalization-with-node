@@ -24,6 +24,16 @@ export class LocalizationHelper {
     },
   };
 
+  /**
+   * Infers the user's country from their IP address using the geoip-lite package,
+   * and returns the corresponding {@link LocaleConfig}.
+   *
+   * If the IP lookup fails, or if the country is not found in the configurations,
+   * the Mozambican configuration is used as a fallback.
+   *
+   * @param req The Express request object.
+   * @returns The inferred {@link LocaleConfig} for the user.
+   */
   static getLocaleFromIP(req: Request): LocaleConfig {
     const ip = req.ip || "127.0.0.1";
     const geo = geoip.lookup(ip);
@@ -55,6 +65,14 @@ export class LocalizationHelper {
     }).format(amount);
   }
 
+  /**
+   * Recursively traverse an object and format any numbers, dates, or strings
+   * that look like dates to a given locale.
+   *
+   * @param data The object to traverse.
+   * @param locale The locale to format to.
+   * @returns The formatted object.
+   */
   static formatNumbersAndDatesRecursively(
     data: any,
     locale: LocaleConfig
