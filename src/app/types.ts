@@ -19,3 +19,13 @@ export interface LocaleConfig {
   decimalSeparator: "." | ",";
   timezone: string;
 }
+declare global {
+  namespace Express {
+    interface Request {
+      locale: LocaleConfig;
+      formatDate: (date: Date) => string;
+      formatCurrency: (amount: number) => string;
+      formatNumber: (number: number) => string;
+    }
+  }
+}

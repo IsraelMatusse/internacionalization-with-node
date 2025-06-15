@@ -45,14 +45,57 @@ export class LocalizationHelper {
       day: "2-digit",
       month: "2-digit",
       year: "numeric",
-      hour12: locale.timeFormat === "12h",
     }).format(date);
   }
 
-  static formatCurrency(amount: number, locale: LocaleConfig): string {
+  static formatVisualNumber(amount: number, locale: LocaleConfig): string {
     return new Intl.NumberFormat(locale.language, {
-      style: "currency",
-      currency: locale.currency,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
     }).format(amount);
   }
+
+  static formatNumbersAndDatesRecursively(
+    data: any,
+    locale: LocaleConfig
+  ): any {
+    if (Array.isArray(data)) {
+      return data.map((item) =>
+        this.formatNumbersAndDatesRecursively(item, locale)
+      );
+    }
+
+    if (typeof data === "object" && data !== null) {
+      const formatted: Record<string, any> = {};
+      for (const [key, value] of Object.entries(data)) {
+        if (typeof value === "number") {
+          formatted[key] = value;
+          formatted[`formatted${capitalize(key)}`] = this.formatVisualNumber(
+            value,
+            locale
+          );
+        } else if (value instanceof Date || this.isDateString(value)) {
+          const date = new Date(value as string | number | Date);
+          formatted[key] = date.toISOString();
+          formatted[`formatted${capitalize(key)}`] = this.formatDate(
+            date,
+            locale
+          );
+        } else {
+          formatted[key] = this.formatNumbersAndDatesRecursively(value, locale);
+        }
+      }
+      return formatted;
+    }
+
+    return data;
+  }
+
+  private static isDateString(value: any): boolean {
+    return typeof value === "string" && !isNaN(Date.parse(value));
+  }
+}
+
+function capitalize(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
