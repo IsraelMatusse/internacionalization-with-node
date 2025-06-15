@@ -7,10 +7,12 @@
   "license": "MIT",
   "dependencies": {
     "@types/express": "^4.17.21",
+    "@types/geoip-lite": "^1.4.4",
     "@types/i18next": "^13.0.0",
     "@types/node": "^20.12.7",
     "@types/nodemon": "^1.19.6",
     "express": "^4.19.2",
+    "geoip-lite": "^1.4.10",
     "http-status-codes": "^2.3.0",
     "i18next": "^23.11.2",
     "i18next-fs-backend": "^2.3.1",

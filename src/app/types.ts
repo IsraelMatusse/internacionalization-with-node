@@ -9,3 +9,13 @@ export class HttpException<T> extends Error {
     Object.setPrototypeOf(this, HttpException.prototype);
   }
 }
+
+export interface LocaleConfig {
+  country: string;
+  language: string;
+  currency: string;
+  dateFormat: string;
+  timeFormat: "12h" | "24h";
+  decimalSeparator: "." | ",";
+  timezone: string;
+}
