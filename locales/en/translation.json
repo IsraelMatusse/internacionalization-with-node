@@ -4,6 +4,7 @@
     "invalid_credentials": "Invalid credentials were inserted. Please check your data and try again."
   },
   "user": {
-    "phone_exists": "User with phone number {{phoneNumber}} already exists."
+    "phone_exists": "User with phone number {{phoneNumber}} already exists.",
+    "found": "Users found successfully."
   }
 }

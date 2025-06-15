@@ -1,9 +1,10 @@
 {
-  "api_health": "A API ESTA BOA",
+  "api_health": "A API ESTA FUNCIONAL",
    "auth": {
     "invalid_credentials": "Credenciais inválidas foram inseridas. Por favor, verifique seus dados e tente novamente."
   },
    "user": {
-    "phone_exists": "O usuário com o número de telefone {{phoneNumber}} já existe."
+    "phone_exists": "O usuário com o número de telefone {{phoneNumber}} já existe.",
+    "found": "Usuários encontrados com sucesso."
   }
 }
