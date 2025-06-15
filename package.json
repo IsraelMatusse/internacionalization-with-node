@@ -16,10 +16,11 @@
     "i18next-http-middleware": "^3.5.0",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
     "typescript": "^5.4.5"
   },
   "scripts": {
     "build": "tsc --project ./",
-    "dev": "nodemon src/server.ts"
+    "dev": "tsx --watch src/server.ts"
   }
 }
