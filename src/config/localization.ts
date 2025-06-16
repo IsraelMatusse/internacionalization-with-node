@@ -41,12 +41,29 @@ export class LocalizationHelper {
     return this.configs[country] || this.configs["MZ"];
   }
 
+  static getLocaleFromIPRaw(ip: string): LocaleConfig {
+    const geo = geoip.lookup(ip);
+    const country = geo?.country || "MZ";
+    return this.configs[country] || this.configs["MZ"];
+  }
+
   static getLocaleFromPreference(req: Request): LocaleConfig {
     const preferredCountry = req.headers["x-user-country"] as string;
     if (preferredCountry && this.configs[preferredCountry.toUpperCase()]) {
       return this.configs[preferredCountry.toUpperCase()];
     }
     return this.getLocaleFromIP(req);
+  }
+
+  static getLocaleFromPreferenceByRawIp(
+    req: Request,
+    ip: string
+  ): LocaleConfig {
+    const preferredCountry = req.headers["x-user-country"] as string;
+    if (preferredCountry && this.configs[preferredCountry.toUpperCase()]) {
+      return this.configs[preferredCountry.toUpperCase()];
+    }
+    return this.getLocaleFromIPRaw(ip);
   }
 
   static formatDate(date: Date, locale: LocaleConfig): string {

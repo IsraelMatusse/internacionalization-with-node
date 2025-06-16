@@ -18,33 +18,31 @@ A Node.js + TypeScript-based API that supports **internationalization (i18n)** a
 📦internacionalization-node
  ┣ 📁locales
  ┃ ┣ 📁en
- ┃ ┃ ┗ 📄translation.json        ← Traduções para inglês
+ ┃ ┃ ┗ 📄translation.json        ← Translations for English
  ┃ ┗ 📁pt
- ┃   ┗ 📄translation.json        ← Traduções para português
- ┣ 📁node_modules                ← Dependências
+ ┃   ┗ 📄translation.json        ← Translations for Portuguese
+ ┣ 📁node_modules                ← Dependencies
  ┣ 📁src
  ┃ ┣ 📁app
- ┃ ┃ ┣ 📄index.ts                ← Ponto de entrada da aplicação (configura rotas/middleware)
- ┃ ┃ ┣ 📄routes.ts               ← Definição de rotas da API
- ┃ ┃ ┗ 📄types.ts                ← Tipos compartilhados, ex: LocaleConfig
+ ┃ ┃ ┣ 📄index.ts                ← Application entry point (sets up routes/middleware)
+ ┃ ┃ ┣ 📄routes.ts               ← API route definitions
+ ┃ ┃ ┗ 📄types.ts                ← Shared types, e.g., LocaleConfig
  ┃ ┣ 📁config
- ┃ ┃ ┗ 📄localization.ts         ← Localização por país/IP (timezone, moeda, data, etc.)
+ ┃ ┃ ┗ 📄localization.ts         ← Localization by country/IP (timezone, currency, date, etc.)
  ┃ ┣ 📁controller
- ┃ ┃ ┗ 📄controller.ts           ← Retorna dados brutos formatados via middleware
+ ┃ ┃ ┗ 📄controller.ts           ← Returns formatted data via middleware
  ┃ ┣ 📁dtos
- ┃ ┃ ┗ 📄dtos.ts                 ← Dados de exemplo a serem formatados (ex: balance, transactions)
+ ┃ ┃ ┗ 📄dtos.ts                 ← Sample data to be formatted (e.g., balance, transactions)
  ┃ ┣ 📁exceptions
- ┃ ┃ ┗ 📄userExceptions.ts       ← Exceções personalizadas (não relacionado diretamente à i18n)
+ ┃ ┃ ┗ 📄userExceptions.ts       ← Custom exceptions (not directly related to i18n)
  ┃ ┣ 📁middleware
- ┃ ┃ ┣ 📄i18n.ts                 ← Middleware i18next (traduções de texto)
- ┃ ┃ ┗ 📄localization.ts         ← Middleware para aplicar formatação de números/datas/moeda
- ┃ ┗ 📄server.ts                 ← Inicializa servidor e aplica middlewares
- ┣ 📄.env                        ← Variáveis de ambiente
- ┣ 📄Dockerfile                  ← Docker (opcional)
- ┣ 📄docker-compose.yaml        ← Docker Compose (opcional)
- ┣ 📄package.json               ← Dependências e scripts
- ┣ 📄tsconfig.json              ← Configuração TypeScript
- ┗ 📄yarn.lock / package-lock.json ← Lockfile de dependências
+ ┃ ┃ ┣ 📄i18n.ts                 ← i18next middleware (text translations)
+ ┃ ┃ ┗ 📄localization.ts         ← Middleware to apply number/date/currency formatting
+ ┃ ┗ 📄server.ts                 ← Initializes server and applies middlewares
+ ┣ 📄.env                        ← Environment variables
+ ┣ 📄package.json               ← Dependencies and scripts
+ ┣ 📄tsconfig.json              ← TypeScript configuration
+ ┗ 📄yarn.lock / package-lock.json ← Dependency lockfile
 
  ---
 
