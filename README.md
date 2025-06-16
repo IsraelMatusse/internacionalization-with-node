@@ -1,6 +1,6 @@
-# 🌍 Internacionalization Node API
+# 🌍 Internationalization Node API
 
-A Node.js + TypeScript-based API that supports **internationalization (i18n)** and **localization (l10n)** of numeric, date, and currency values. It also supports multilingual translations via `i18next`, and automatically formats responses based on the user's IP or preferences.
+A Node.js + TypeScript-based API that supports **Internationalization (i18n)** and **localization (l10n)** of numeric, date, and currency values. It also supports multilingual translations via `i18next`, and automatically formats responses based on the user's IP or preferences.
 
 ## 🚀 Features
 - 🌐 Automatic locale detection based on IP
