@@ -3,7 +3,7 @@ import {
   checkApiHealth,
   getUserPreferencesByIpController,
   userController,
-} from "../controller/controller";
+} from "../controller/testController";
 export const healthRoutes = express.Router();
 
 healthRoutes.get("/health", checkApiHealth);

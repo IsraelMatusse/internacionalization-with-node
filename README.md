@@ -3,7 +3,6 @@
 A Node.js + TypeScript-based API that supports **internationalization (i18n)** and **localization (l10n)** of numeric, date, and currency values. It also supports multilingual translations via `i18next`, and automatically formats responses based on the user's IP or preferences.
 
 ## 🚀 Features
-
 - 🌐 Automatic locale detection based on IP
 - 🔢 Smart formatting for numbers, currency, and dates
 - 🧠 Middleware to recursively localize all numeric and date fields
@@ -51,8 +50,8 @@ A Node.js + TypeScript-based API that supports **internationalization (i18n)** a
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/IsraelMatusse/DONNATIONS-APP-FRONT.git
-cd internacionalization-node
+git clone https://github.com/IsraelMatusse/Internationalization-with-node.git
+cd Internationalization-with-node
 
 2. Install Dependencies
 yarn
@@ -62,7 +61,6 @@ The server will start on: http://localhost:3002
 
 🧪 Sample Endpoints
 	•	GET /users → Returns a user with localized numbers and dates
-	•	GET /products → Returns product data with formatting applied
 	•	Response format adapts based on your IP (or can be manually injected via mock IP)
 
 🌍 Adding New Locales
