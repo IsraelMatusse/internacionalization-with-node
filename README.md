@@ -11,7 +11,6 @@ A Node.js + TypeScript-based API that supports **Internationalization (i18n)** a
 - 📦 DTO layer to handle structured data
 - ⚡ Fast and lightweight using Express and TypeScript
 
----
 
 ## 📁 Project Structure
 📦internacionalization-node
@@ -43,7 +42,7 @@ A Node.js + TypeScript-based API that supports **Internationalization (i18n)** a
  ┣ 📄tsconfig.json              ← TypeScript configuration
  ┗ 📄yarn.lock / package-lock.json ← Dependency lockfile
 
- ---
+
 
 ## 🛠️ Setup
 
